@@ -1,0 +1,43 @@
+// You are using GCC
+#include<iostream>
+using namespace std;
+
+class constructor{
+    
+    public:
+    int count;
+    constructor(int n){
+        for(int i=0;i<n;i++){
+        cout << "Constructor called" << endl;
+        }
+        count = n;
+    }
+    
+    ~constructor(){
+        for(int j=0;j<count;j++){
+        cout << "Destructor called" << endl;
+        
+        }
+    }
+};
+int main(){
+    
+    int n;
+    cin >> n;
+    if(n<1 || n>100){
+        return 0;
+    }
+    constructor obj(n);
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
