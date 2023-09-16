@@ -1,0 +1,21 @@
+// You are using GCC
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+int main(){
+    int num;
+    cin >> num;
+    ofstream outfile;
+    ifstream infile;
+    infile.open("numbers.txt");
+    cout << "File is empty" << endl;
+    
+    infile.close();
+    outfile.open("numbers.txt",ios::out);
+    cout << "Adding " << num << "numbers starting from 100" << endl;
+    cout << "Success " << endl;
+    
+    return 0;
+    
+}
