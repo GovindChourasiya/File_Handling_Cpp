@@ -1,0 +1,50 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+class GradeBook{
+public:
+  GradeBook (){};
+
+  void setData(string name, string instructor){
+    courseName = name;
+    instructorName = instructor;
+  };
+
+  void setCourseName(string name){
+    courseName = name;
+  };
+
+  string getCourseName() const{
+    return courseName;
+  };
+
+  void setInstructorName(const string _instructorName){
+    instructorName = _instructorName;
+  };
+
+  string getInstructorName() const{
+    return instructorName;
+  };
+
+  void displayMessage() const{
+    cout << "Welcome to the grade book for " << getCourseName() << "!" << endl;
+    cout << "This course is presented by: " << getInstructorName() << endl;
+  };
+
+private:
+  string courseName;
+  string instructorName;
+};
+
+int main() {
+  string subject, instr;
+  getline(cin, subject);
+  getline(cin, instr);
+
+  GradeBook book1;
+  book1.setData(subject, instr);
+  book1.displayMessage();
+
+  return 0;
+}
