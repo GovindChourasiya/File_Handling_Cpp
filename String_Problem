@@ -1,0 +1,27 @@
+// You are using GCC
+#include<iostream>
+#include<string>
+#include<fstream>
+using namespace std;
+int main(){
+    string s;
+    char ch[100];
+    getline(cin,s);
+    ofstream fout;
+    ifstream fin;
+    fout.open("sample.txt",ios::app);
+    fout << "Time is a Great Teacher BUT Unfortunately It Kills All Its Pupils";
+    fout.close();
+    fout.open("sample.txt",ios::app);
+    fout << s ;
+    fout.close();
+    fin.open("sample.txt",ios::in);
+    cout << "Data appended successfully" << endl;
+    while(fin.getline(ch,100)){
+    cout << ch;
+    }
+    fin.close();
+    
+    return 0;
+    
+}
